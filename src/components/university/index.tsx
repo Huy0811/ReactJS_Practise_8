@@ -9,7 +9,7 @@ interface universityProps {
   }[];
 }
 
-const University = (props: universityProps) => {
+const University = ({ university }: universityProps) => {
   return (
     <table className="table table-striped">
       <thead>
@@ -21,7 +21,7 @@ const University = (props: universityProps) => {
         </tr>
       </thead>
       <tbody>
-        {props.university.map((item: any) => (
+        {university.map((item: any) => (
           <tr>
             <td>{item.id}</td>
             <td>{item.name}</td>
